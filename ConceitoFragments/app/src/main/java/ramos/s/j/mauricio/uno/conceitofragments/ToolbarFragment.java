@@ -64,6 +64,7 @@ public class ToolbarFragment extends Fragment implements SeekBar.OnSeekBarChange
        return toolbarLayoutInflated;
     }
 
+    //Vincula com o main
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
@@ -82,8 +83,9 @@ public class ToolbarFragment extends Fragment implements SeekBar.OnSeekBarChange
     }
 
     @Override
-    public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-        TEST_SIZE = i;
+    public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
+        TEST_SIZE = progress;
+
 
     }
 

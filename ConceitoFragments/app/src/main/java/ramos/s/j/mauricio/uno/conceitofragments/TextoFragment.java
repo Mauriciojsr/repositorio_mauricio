@@ -31,4 +31,9 @@ public class TextoFragment extends Fragment {
 
         return textoFragmentLayoutInflated;
     }
+
+    public void trocarPropriedadeDoTexto(int tamanhoFonte, String texto) {
+        tvTexto.setTextSize(tamanhoFonte);
+        tvTexto.setText(texto);
+    }
 }
