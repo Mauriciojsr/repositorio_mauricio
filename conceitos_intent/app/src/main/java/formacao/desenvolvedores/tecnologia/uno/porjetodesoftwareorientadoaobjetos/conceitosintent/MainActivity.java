@@ -1,9 +1,15 @@
 package formacao.desenvolvedores.tecnologia.uno.porjetodesoftwareorientadoaobjetos.conceitosintent;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,12 +20,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    //Atributos de classe
     private Button btnPerguntar;
     private TextView tvExibirRespota;
     private TextView tvTitulo;
     private EditText edtPergunta;
     private ImageButton btnDelete;
     public static final int REQUEST_CODE = 5;
+    private ActivityResultLauncher<Intent> activityResultLauncher; //<...> Generics
+
 
 
     @Override
@@ -41,17 +50,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(!edtPergunta.getText().toString().isEmpty()){
-                    Intent irParaOutraActivity = new Intent(MainActivity.this, RespostaActivity.class);
+                    if(Build.VERSION.SDK_INT < Build.VERSION_CODES.R) {
+                        Intent irParaOutraActivity = new Intent(MainActivity.this, RespostaActivity.class);
 
-                    String conteudo = edtPergunta.getText().toString();
-                    irParaOutraActivity.putExtra("Pergunta", conteudo);
+                        String conteudo = edtPergunta.getText().toString();
+                        irParaOutraActivity.putExtra("Pergunta", conteudo);
 
-                    startActivityForResult(irParaOutraActivity, REQUEST_CODE);
+
+                        startActivityForResult(irParaOutraActivity, REQUEST_CODE);
+                    }else {
+
+                    }
 
 
                 } else {
                     Toast.makeText(MainActivity.this, "Insira uma pergunta", Toast.LENGTH_LONG).show();
                 }
+                    openActivityForResult();
             }
         });
 
@@ -63,9 +78,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult()
+                , new ActivityResultCallback<ActivityResult>() {
+            @Override
+            public void onActivityResult(ActivityResult result) {
+                if (result.getResultCode() == Activity.RESULT_OK) {
+                    Intent data = result.getData();
+                    tvTitulo.setVisibility(View.VISIBLE);
+                    tvExibirRespota.setText(data.getExtras().getString("returnData"));
+                }
+            }
+        });
 
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -79,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
 
             if(returnString != null){
                 if(!returnString.isEmpty()){
-                    tvTitulo.setVisibility(View.VISIBLE);
+
                     //edtPergunta.setText(returnString);
 
                 }
@@ -88,6 +114,21 @@ public class MainActivity extends AppCompatActivity {
             tvExibirRespota.setText(returnString);
         }
     }
+
+    private void openActivityForResult(){
+        Intent intent01 = new Intent(this, RespostaActivity.class);//Obejetos instanciado, dinamicamente.
+
+        /*String myString = edtPergunta.getText().toString();
+        intent01.putExtra("Pergunta", myString);*/
+
+
+        intent01.putExtra("Pergunta", edtPergunta.getText().toString());
+
+        activityResultLauncher.launch(intent01);
+
+    }
+
+
 
 
 }
