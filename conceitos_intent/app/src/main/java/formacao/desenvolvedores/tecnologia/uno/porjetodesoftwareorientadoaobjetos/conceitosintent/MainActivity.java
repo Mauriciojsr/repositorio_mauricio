@@ -19,8 +19,11 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import formacao.desenvolvedores.tecnologia.uno.porjetodesoftwareorientadoaobjetos.conceitosintent.utils.app.UtilsApp;
+
 public class MainActivity extends AppCompatActivity {
     //Atributos de classe
+    public static final String TAG = "Main";
     private Button btnPerguntar;
     private TextView tvExibirRespota;
     private TextView tvTitulo;
@@ -90,6 +93,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        UtilsApp utilsApp = new UtilsApp();
+        Log.d(TAG, "valor convertido de tipo primitivo float p/ int: " + utilsApp.convertToInt(5.1987));
+
+        byte b = 55;
+        Log.d(TAG, "valor convertido de tipo primitivo byte p/ int: " + utilsApp.convertToInt(b));
+
+        short c = 256;
+        Log.d(TAG, "valor convertido de tipo primitivo short p/ int: " + utilsApp.convertToInt(c));
+
+        long d = 5548564;
+        Log.d(TAG, "valor convertido de tipo primitivo long p/ int: " + utilsApp.convertToInt(d));
+
+        Log.d(TAG,"valor convertido de tipo primitivo String p/ int: " + utilsApp.convertToInt(this, "2"));
+
     }
 
 
@@ -113,6 +130,8 @@ public class MainActivity extends AppCompatActivity {
 
             tvExibirRespota.setText(returnString);
         }
+
+
     }
 
     private void openActivityForResult(){
