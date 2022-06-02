@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openActivityForResult(){
-        Intent intent01 = new Intent(this, RespostaActivity.class);//Obejetos instanciado, dinamicamente.
+        Intent intent01 = new Intent(this, RespostaActivity.class);//Obejetos instanciado, dinamicamente.This==argumento de um método.
 
         /*String myString = edtPergunta.getText().toString();
         intent01.putExtra("Pergunta", myString);*/

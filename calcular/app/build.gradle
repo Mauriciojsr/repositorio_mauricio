@@ -6,7 +6,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "formacao.desenvolvedores.tecnologia.uno.porjetodesoftwareorientadoaobjetos.conceitosintent"
+        applicationId "ramos.s.j.mauricio.formacao.desenvolvedores.tecnologia.uno.calcular"
         minSdk 23
         targetSdk 32
         versionCode 1
@@ -25,7 +25,6 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    namespace 'formacao.desenvolvedores.tecnologia.uno.porjetodesoftwareorientadoaobjetos.conceitosintent'
 }
 
 dependencies {
