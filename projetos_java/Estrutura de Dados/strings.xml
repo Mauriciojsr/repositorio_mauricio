@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Conceitos Estrutura de Dados</string>
+    <string name="btn_inserir_inicio">Inserir Nó \n no início</string>
+    <string name="btn_inserir_fim">Inserir Nó \n no Final</string>
+    <string name="btn_inserir_no">Inserir Nó</string>
+    <string name="btn_remover_no">Remover Nó</string>
+</resources>
