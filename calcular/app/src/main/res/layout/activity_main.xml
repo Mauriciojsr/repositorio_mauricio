@@ -68,7 +68,7 @@
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="@id/edtNumero1"
         app:layout_constraintStart_toStartOf="@+id/edtNumero1"
-        app:layout_constraintTop_toBottomOf="@+id/imgOperacao"
+        app:layout_constraintTop_toBottomOf="@+id/imgSoma"
         />
 
     <TextView
@@ -92,7 +92,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edtNumero2" />
 
     <ImageView
-        android:id="@+id/imgOperacao"
+        android:id="@+id/imgSoma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -102,7 +102,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edtNumero1" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imgIgual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
