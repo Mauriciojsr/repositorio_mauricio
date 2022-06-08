@@ -69,32 +69,59 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
                 String operacaoSelecionada = spiOpcoes.getSelectedItem().toString();
 
-                tvResultado.setText("Por favor digite algum número!!");
 
                 if(operacaoSelecionada.equals(DIVIDIR)){
-                    tvResultado.setText(dividir());
+                    if(validarTermosVazios()) {
+                        if(validarDivisor()){
+                            tvResultado.setText(dividir());
+                        }else{
+                            Toast.makeText(MainActivity.this, "O divisor não pode ser ZERO!!", Toast.LENGTH_SHORT).show();
+                        }
+
+                    } else{
+                        Toast.makeText(MainActivity.this, "Preencha com algum valor!", Toast.LENGTH_SHORT).show();
+
+                    }
 
                 }else  if(operacaoSelecionada.equals(MULTIPLICAR)){
-                    tvResultado.setText(multiplicar());
+                    if(validarTermosVazios()) {
+                        tvResultado.setText(multiplicar());
+                    } else{
+                        Toast.makeText(MainActivity.this, "Preencha com algum valor!", Toast.LENGTH_SHORT).show();
+
+                    }
 
                 }else if(operacaoSelecionada.equals(SOMAR)){
-                    tvResultado.setText(somar());
+                    if(validarTermosVazios()) {
+                        tvResultado.setText(somar());
+                    } else{
+                        Toast.makeText(MainActivity.this, "Preencha com algum valor!", Toast.LENGTH_SHORT).show();
+
+                    }
 
                 }else if(operacaoSelecionada.equals(SUBTRAIR)){
-                    tvResultado.setText(subtrair());
+                    if(validarTermosVazios()) {
+                        tvResultado.setText(subtrair());
+                    } else{
+                        Toast.makeText(MainActivity.this, "Preencha com algum valor!", Toast.LENGTH_SHORT).show();
 
+                    }
+
+                }else {
+                    Toast.makeText(MainActivity.this, "Selecione um número e uma opção matemática!!", Toast.LENGTH_SHORT).show();
                 }
 
             }
         });
 
-        imgLimpar.setOnClickListener(new View.OnClickListener() {
+        imgLimpar.setOnClickListener(new View.OnClickListener() { //Clic do botão limpar
             @Override
             public void onClick(View view) {
                 edtNumero1.setText("");
                 edtNumero2.setText("");
                 tvResultado.setText("");
-                imgOperacao.setVisibility(View.INVISIBLE);
+                //imgOperacao.setVisibility(View.INVISIBLE);
+                //spiOpcoes.setVisibility(View.INVISIBLE);
             }
         });
 
@@ -141,35 +168,60 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     private String dividir(){
-        int n1 = Integer.valueOf(edtNumero1.getText().toString());
-        int n2 = Integer.valueOf(edtNumero2.getText().toString());
+        int n1 = Integer.valueOf(edtNumero1.getText().toString()).intValue();
+        int n2 = Integer.valueOf(edtNumero2.getText().toString()).intValue();
         int res = n1 / n2;
 
         return "O resultado da divisão é: " + res;
     }
 
     private String multiplicar(){
-        int n1 = Integer.valueOf(edtNumero1.getText().toString());
-        int n2 = Integer.valueOf(edtNumero2.getText().toString());
+        int n1 = Integer.valueOf(edtNumero1.getText().toString()).intValue();
+        int n2 = Integer.valueOf(edtNumero2.getText().toString()).intValue();
         int res = n1 * n2;
 
         return "O resultado da multiplicação é: " + res;
     }
 
     private String somar(){
-        int n1 = Integer.valueOf(edtNumero1.getText().toString());
-        int n2 = Integer.valueOf(edtNumero2.getText().toString());
+        int n1 = Integer.valueOf(edtNumero1.getText().toString()).intValue();
+        int n2 = Integer.valueOf(edtNumero2.getText().toString()).intValue();
         int res = n1+n2;
 
         return "O resultado da soma é: " + res;
     }
 
     private String subtrair(){
-        int n1 = Integer.valueOf(edtNumero1.getText().toString());
-        int n2 = Integer.valueOf(edtNumero2.getText().toString());
+        int n1 = Integer.valueOf(edtNumero1.getText().toString()).intValue();
+        int n2 = Integer.valueOf(edtNumero2.getText().toString()).intValue();
         int res = n1 - n2;
 
         return "O resultado da subtração é: " + res;
+    }
+
+    private boolean validarTermosVazios(){
+        if(!edtNumero1.getText().toString().isEmpty()){
+            if(!edtNumero2.getText().toString().isEmpty()){
+                return true;
+            }else{
+                edtNumero2.requestFocus();
+                return false;
+            }
+
+        }else {
+            edtNumero1.requestFocus();
+            return false;
+        }
+    }
+
+    private boolean validarDivisor(){
+        int n2 = Integer.valueOf(edtNumero2.getText().toString());
+        if(n2 != 0){
+            return true;
+
+        }else {
+            return false;
+        }
     }
 
 
