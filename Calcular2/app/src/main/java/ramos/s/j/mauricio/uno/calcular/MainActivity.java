@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         ActionBar actionBar = getSupportActionBar();
         if(actionBar != null){
-            actionBar.setTitle("Calcular");
+            actionBar.setTitle("Calculadora Maluca dos DEV!");
         }
 
 
@@ -67,17 +67,19 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
                 String operacaoSelecionada = spiOpcoes.getSelectedItem().toString();
 
-                if(operacaoSelecionada == DIVIDIR){
+                tvResultado.setText("Por favor digite algum número!!");
 
-                    //tvResultado.setText("teste");
+                if(operacaoSelecionada.equals(DIVIDIR)){
+                    tvResultado.setText(dividir());
 
-                }else  if(operacaoSelecionada == MULTIPLICAR){
+                }else  if(operacaoSelecionada.equals(MULTIPLICAR)){
+                    tvResultado.setText(multiplicar());
 
                 }else if(operacaoSelecionada.equals(SOMAR)){
-
                     tvResultado.setText(somar());
 
-                }else if(operacaoSelecionada == SUBTRAIR){
+                }else if(operacaoSelecionada.equals(SUBTRAIR)){
+                    tvResultado.setText(subtrair());
 
                 }
 
@@ -89,36 +91,34 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        //Toast.makeText(MainActivity.this, adapterView.getItemAtPosition(i).toString(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this, adapterView.getItemAtPosition(i).toString(), Toast.LENGTH_SHORT).show();
 
         if(adapterView.getItemAtPosition(i).toString().equals(DIVIDIR)){
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.divisao, getTheme()));
             imgOperacao.setVisibility(View.VISIBLE);
-            int n1 = Integer.valueOf(edtNumero1.getText().toString());
-            int n2 = Integer.valueOf(edtNumero2.getText().toString());
-            int res = n1/n2;
-            tvResultado.setText(String.valueOf(res));
+            edtNumero1.setText("Dividendo");
+            edtNumero2.setText("Divisor");
+
 
         }else if(adapterView.getItemAtPosition(i).toString().equals(MULTIPLICAR)){
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.multiplica, getTheme()));
             imgOperacao.setVisibility(View.VISIBLE);
-            int n1 = Integer.valueOf(edtNumero1.getText().toString());
-            int n2 = Integer.valueOf(edtNumero2.getText().toString());
-            int res = n1*n2;
-            tvResultado.setText(String.valueOf(res));
+            edtNumero1.setText("Multiplicando");
+            edtNumero2.setText("Multiplicador");
+
 
         }else if(adapterView.getItemAtPosition(i).toString().equals(SOMAR)){
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.soma, getTheme()));
             imgOperacao.setVisibility(View.VISIBLE);
+            edtNumero1.setText("Parcela");
+            edtNumero2.setText("Parcela");
 
 
         }else if(adapterView.getItemAtPosition(i).toString().equals(SUBTRAIR)){
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.subtracao, getTheme()));
             imgOperacao.setVisibility(View.VISIBLE);
-            int n1 = Integer.valueOf(edtNumero1.getText().toString());
-            int n2 = Integer.valueOf(edtNumero2.getText().toString());
-            int res = n1-n2;
-            tvResultado.setText(String.valueOf(res));
+            edtNumero1.setText("Minuendo");
+            edtNumero2.setText("Subtraendo");
 
         }
     }
@@ -128,16 +128,36 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     }
 
-    private String somar(){
-        String resultado = "";
+    private String dividir(){
+        int n1 = Integer.valueOf(edtNumero1.getText().toString());
+        int n2 = Integer.valueOf(edtNumero2.getText().toString());
+        int res = n1 / n2;
 
+        return "O resultado da divisão é: " + res;
+    }
+
+    private String multiplicar(){
+        int n1 = Integer.valueOf(edtNumero1.getText().toString());
+        int n2 = Integer.valueOf(edtNumero2.getText().toString());
+        int res = n1 * n2;
+
+        return "O resultado da multiplicação é: " + res;
+    }
+
+    private String somar(){
         int n1 = Integer.valueOf(edtNumero1.getText().toString());
         int n2 = Integer.valueOf(edtNumero2.getText().toString());
         int res = n1+n2;
 
+        return "O resultado da soma é: " + res;
+    }
 
+    private String subtrair(){
+        int n1 = Integer.valueOf(edtNumero1.getText().toString());
+        int n2 = Integer.valueOf(edtNumero2.getText().toString());
+        int res = n1 - n2;
 
-        return resultado;
+        return "O resultado da subtração é: " + res;
     }
 
 
