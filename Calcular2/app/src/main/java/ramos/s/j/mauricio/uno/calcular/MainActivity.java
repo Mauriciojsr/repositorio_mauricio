@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public static final String MULTIPLICAR = "Multiplicar";
     public static final String SOMAR       = "Somar";
     public static final String SUBTRAIR    = "Subtrair";
+    public int ZERO = 0;
     private TextView tvResultado;
     private Spinner spiOpcoes;
     private EditText edtNumero1, edtNumero2;
@@ -216,7 +217,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private boolean validarDivisor(){
         int n2 = Integer.valueOf(edtNumero2.getText().toString());
-        if(n2 != 0){
+        if(n2 != ZERO){
             return true;
 
         }else {
