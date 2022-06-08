@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private EditText edtNumero1, edtNumero2;
     private ImageView imgOperacao;
     private Button btnCalular;
+    private ImageButton imgLimpar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         edtNumero2  = findViewById(R.id.edtNumero2);
         imgOperacao = findViewById(R.id.imgOperacao);
         btnCalular  = findViewById(R.id.btnCalcular);
+        imgLimpar   = findViewById(R.id.imgLimpar);
 
         imgOperacao.setVisibility(View.INVISIBLE);
 
@@ -86,6 +88,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             }
         });
 
+        imgLimpar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                edtNumero1.setText("");
+                edtNumero2.setText("");
+                tvResultado.setText("");
+                imgOperacao.setVisibility(View.INVISIBLE);
+            }
+        });
+
 
     }
 
@@ -96,29 +108,29 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         if(adapterView.getItemAtPosition(i).toString().equals(DIVIDIR)){
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.divisao, getTheme()));
             imgOperacao.setVisibility(View.VISIBLE);
-            edtNumero1.setText("Dividendo");
-            edtNumero2.setText("Divisor");
+            edtNumero1.setHint("Dividendo");
+            edtNumero2.setHint("Divisor");
 
 
         }else if(adapterView.getItemAtPosition(i).toString().equals(MULTIPLICAR)){
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.multiplica, getTheme()));
             imgOperacao.setVisibility(View.VISIBLE);
-            edtNumero1.setText("Multiplicando");
-            edtNumero2.setText("Multiplicador");
+            edtNumero1.setHint("Multiplicando");
+            edtNumero2.setHint("Multiplicador");
 
 
         }else if(adapterView.getItemAtPosition(i).toString().equals(SOMAR)){
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.soma, getTheme()));
             imgOperacao.setVisibility(View.VISIBLE);
-            edtNumero1.setText("Parcela");
-            edtNumero2.setText("Parcela");
+            edtNumero1.setHint("Parcela");
+            edtNumero2.setHint("Parcela");
 
 
         }else if(adapterView.getItemAtPosition(i).toString().equals(SUBTRAIR)){
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.subtracao, getTheme()));
             imgOperacao.setVisibility(View.VISIBLE);
-            edtNumero1.setText("Minuendo");
-            edtNumero2.setText("Subtraendo");
+            edtNumero1.setHint("Minuendo");
+            edtNumero2.setHint("Subtraendo");
 
         }
     }
