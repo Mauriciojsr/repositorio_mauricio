@@ -114,6 +114,26 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
                     }
 
+                }else if(operacaoSelecionada.equals(LOGARITMO)){
+
+                        tvResultado.setText(logarimo());
+
+
+                }else if(operacaoSelecionada.equals(POTENCIACAO)){
+
+                        tvResultado.setText(potenciacao());
+
+
+                }else if(operacaoSelecionada.equals(POTENCIA_DE_10)){
+
+                        tvResultado.setText(potencia_10());
+
+
+                }else if(operacaoSelecionada.equals(RAIZ_QUADRADA)){
+
+                        tvResultado.setText(raiz());
+
+
                 }else {
                     Toast.makeText(MainActivity.this, "Selecione um número e uma opção matemática!!", Toast.LENGTH_SHORT).show();
                 }
@@ -142,6 +162,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             imgOperacao.setVisibility(View.VISIBLE);
             edtNumero1.setHint("Dividendo");
             edtNumero2.setHint("Divisor");
+            edtNumero2.setVisibility(View.VISIBLE);
 
 
         }else if(adapterView.getItemAtPosition(i).toString().equals(MULTIPLICAR)){
@@ -149,6 +170,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             imgOperacao.setVisibility(View.VISIBLE);
             edtNumero1.setHint("Multiplicando");
             edtNumero2.setHint("Multiplicador");
+            edtNumero2.setVisibility(View.VISIBLE);
 
 
         }else if(adapterView.getItemAtPosition(i).toString().equals(SOMAR)){
@@ -156,6 +178,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             imgOperacao.setVisibility(View.VISIBLE);
             edtNumero1.setHint("Parcela");
             edtNumero2.setHint("Parcela");
+            edtNumero2.setVisibility(View.VISIBLE);
 
 
         }else if(adapterView.getItemAtPosition(i).toString().equals(SUBTRAIR)){
@@ -163,29 +186,34 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             imgOperacao.setVisibility(View.VISIBLE);
             edtNumero1.setHint("Minuendo");
             edtNumero2.setHint("Subtraendo");
+            edtNumero2.setVisibility(View.VISIBLE);
 
         }else if(adapterView.getItemAtPosition(i).toString().equals(LOGARITMO)){
-        imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.logaritmo, getTheme()));
-        imgOperacao.setVisibility(View.VISIBLE);
-        edtNumero1.setHint("Log1");
-        edtNumero2.setHint("Log2");
+            imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.logaritmo, getTheme()));
+            imgOperacao.setVisibility(View.VISIBLE);
+            edtNumero1.setHint("Log1");
+            edtNumero2.setHint("Log2");
+            edtNumero2.setVisibility(View.VISIBLE);
 
         }else if(adapterView.getItemAtPosition(i).toString().equals(POTENCIACAO)){
-        imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.subtracao, getTheme()));
-        imgOperacao.setVisibility(View.VISIBLE);
-        edtNumero1.setHint("teste");
-        edtNumero2.setHint("teste");
+            imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.subtracao, getTheme()));
+            imgOperacao.setVisibility(View.VISIBLE);
+            edtNumero1.setHint("teste");
+            edtNumero2.setHint("teste");
+            edtNumero2.setVisibility(View.VISIBLE);
 
         }else if(adapterView.getItemAtPosition(i).toString().equals(POTENCIA_DE_10)){
-        imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.soma, getTheme()));
-        imgOperacao.setVisibility(View.VISIBLE);
-        edtNumero1.setHint("Potencia");
-        edtNumero2.setHint("Elevado");
+            imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.soma, getTheme()));
+            imgOperacao.setVisibility(View.VISIBLE);
+            edtNumero1.setHint("Potencia");
+            edtNumero2.setText("10");
+            edtNumero2.setVisibility(View.VISIBLE);
 
         }else if(adapterView.getItemAtPosition(i).toString().equals(RAIZ_QUADRADA)){
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.raiz_quadrada, getTheme()));
             imgOperacao.setVisibility(View.VISIBLE);
-            edtNumero1.setHint("raiz1");
+            edtNumero1.setHint("raiz");
+            edtNumero2.setVisibility(View.INVISIBLE);
 
         }
     }
@@ -248,7 +276,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private String potencia_10(){
         Double n1 = Double.parseDouble(edtNumero1.getText().toString());
 
-        Double res = Math.pow(n1,DEZ);
+        Double res = Math.pow(DEZ, n1);
 
         return "O resultado da expressão: " + res;
 
