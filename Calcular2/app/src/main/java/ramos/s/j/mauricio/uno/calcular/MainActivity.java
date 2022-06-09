@@ -19,11 +19,16 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    public static final String DIVIDIR     = "Dividir";
-    public static final String MULTIPLICAR = "Multiplicar";
-    public static final String SOMAR       = "Somar";
-    public static final String SUBTRAIR    = "Subtrair";
+    public static final String DIVIDIR        = "Dividir";
+    public static final String MULTIPLICAR    = "Multiplicar";
+    public static final String SOMAR          = "Somar";
+    public static final String SUBTRAIR       = "Subtrair";
+    public static final String LOGARITMO      = "Logaritmo";
+    public static final String POTENCIACAO    = "Potenciação";
+    public static final String POTENCIA_DE_10 = "Potencia de 10";
+    public static final String RAIZ_QUADRADA  = "Raiz Quadrada";
     public int ZERO = 0;
+    public int DEZ = 10;
     private TextView tvResultado;
     private Spinner spiOpcoes;
     private EditText edtNumero1, edtNumero2;
@@ -31,10 +36,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private Button btnCalular;
     private ImageButton imgLimpar;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
 
         ActionBar actionBar = getSupportActionBar();
@@ -121,8 +127,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 edtNumero1.setText("");
                 edtNumero2.setText("");
                 tvResultado.setText("");
-                //imgOperacao.setVisibility(View.INVISIBLE);
-                //spiOpcoes.setVisibility(View.INVISIBLE);
             }
         });
 
@@ -159,6 +163,29 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             imgOperacao.setVisibility(View.VISIBLE);
             edtNumero1.setHint("Minuendo");
             edtNumero2.setHint("Subtraendo");
+
+        }else if(adapterView.getItemAtPosition(i).toString().equals(LOGARITMO)){
+        imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.logaritmo, getTheme()));
+        imgOperacao.setVisibility(View.VISIBLE);
+        edtNumero1.setHint("Log1");
+        edtNumero2.setHint("Log2");
+
+        }else if(adapterView.getItemAtPosition(i).toString().equals(POTENCIACAO)){
+        imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.subtracao, getTheme()));
+        imgOperacao.setVisibility(View.VISIBLE);
+        edtNumero1.setHint("teste");
+        edtNumero2.setHint("teste");
+
+        }else if(adapterView.getItemAtPosition(i).toString().equals(POTENCIA_DE_10)){
+        imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.soma, getTheme()));
+        imgOperacao.setVisibility(View.VISIBLE);
+        edtNumero1.setHint("Potencia");
+        edtNumero2.setHint("Elevado");
+
+        }else if(adapterView.getItemAtPosition(i).toString().equals(RAIZ_QUADRADA)){
+            imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.raiz_quadrada, getTheme()));
+            imgOperacao.setVisibility(View.VISIBLE);
+            edtNumero1.setHint("raiz1");
 
         }
     }
@@ -200,6 +227,42 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         return "O resultado da subtração é: " + res;
     }
 
+    private String logarimo(){
+        Double n1 = Double.parseDouble(edtNumero1.getText().toString());
+        Double n2 = Double.parseDouble(edtNumero2.getText().toString());
+
+        Double res = Math.log(n1/n2);
+
+        return "O retorno da operação é: " + res;
+    }
+
+    private String potenciacao(){
+        Double n1 = Double.parseDouble(edtNumero1.getText().toString());
+        Double n2 = Double.parseDouble(edtNumero2.getText().toString());
+
+        Double res = Math.pow(n1,n2);
+
+        return "O resultado da expressão é: " + res;
+    }
+
+    private String potencia_10(){
+        Double n1 = Double.parseDouble(edtNumero1.getText().toString());
+
+        Double res = Math.pow(n1,DEZ);
+
+        return "O resultado da expressão: " + res;
+
+    }
+
+    private String raiz(){
+        Double n1 = Double.parseDouble(edtNumero1.getText().toString());
+
+        Double res = Math.sqrt(n1);
+
+        return "O resultado da expressão é: " + res;
+    }
+
+
     private boolean validarTermosVazios(){
         if(!edtNumero1.getText().toString().isEmpty()){
             if(!edtNumero2.getText().toString().isEmpty()){
@@ -224,6 +287,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             return false;
         }
     }
+
+
+
 
 
 }

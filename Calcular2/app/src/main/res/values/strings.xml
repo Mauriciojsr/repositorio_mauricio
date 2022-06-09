@@ -6,7 +6,11 @@
         <item>Dividir</item>
         <item>Multiplicar</item>
         <item>Somar</item>
-        <item>Subtrair</item>
+        <item>Logaritmo</item>
+        <item>Potenciação</item>
+        <item>Potencia de 10</item>
+        <item>Raiz Quadrada</item>
+
     </string-array>
 
 </resources>
