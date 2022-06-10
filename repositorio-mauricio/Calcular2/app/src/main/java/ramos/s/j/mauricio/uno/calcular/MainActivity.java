@@ -198,8 +198,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }else if(adapterView.getItemAtPosition(i).toString().equals(POTENCIACAO)){
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.potenciacao, getTheme()));
             imgOperacao.setVisibility(View.VISIBLE);
-            edtNumero1.setHint("teste");
-            edtNumero2.setHint("teste");
+            edtNumero1.setHint("Valor1");
+            edtNumero2.setHint("Valor2");
             edtNumero2.setVisibility(View.VISIBLE);
 
         }else if(adapterView.getItemAtPosition(i).toString().equals(POTENCIA_DE_10)){
