@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public static final String SUBTRAIR       = "Subtrair";
     public static final String LOGARITMO      = "Logaritmo";
     public static final String POTENCIACAO    = "Potenciação";
-    public static final String POTENCIA_DE_10 = "Potencia de 10";
+    public static final String POTENCIA_DE_10 = "Potência de 10";
     public static final String RAIZ_QUADRADA  = "Raiz Quadrada";
     public int ZERO                           = 0;
     public int DEZ                            = 10;
@@ -75,7 +75,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             public void onClick(View view) {
 
                 String operacaoSelecionada = spiOpcoes.getSelectedItem().toString();
-
 
                 if(operacaoSelecionada.equals(DIVIDIR)){
                     if(validarTermosVazios()) {
@@ -163,7 +162,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+
         Toast.makeText(MainActivity.this, adapterView.getItemAtPosition(i).toString(), Toast.LENGTH_SHORT).show();
+
+        //Inicia a vew com comportamento padrão, ou seja, iniciada
+        validarExibicao(false);
 
         if(adapterView.getItemAtPosition(i).toString().equals(DIVIDIR)){
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.divisao, getTheme()));
@@ -171,6 +175,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             edtNumero1.setHint("Dividendo");
             edtNumero2.setHint("Divisor");
             edtNumero2.setVisibility(View.VISIBLE);
+
 
 
         }else if(adapterView.getItemAtPosition(i).toString().equals(MULTIPLICAR)){
@@ -181,12 +186,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             edtNumero2.setVisibility(View.VISIBLE);
 
 
+
         }else if(adapterView.getItemAtPosition(i).toString().equals(SOMAR)){
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.soma, getTheme()));
             imgOperacao.setVisibility(View.VISIBLE);
             edtNumero1.setHint("Parcela");
             edtNumero2.setHint("Parcela");
             edtNumero2.setVisibility(View.VISIBLE);
+
 
 
         }else if(adapterView.getItemAtPosition(i).toString().equals(SUBTRAIR)){
@@ -203,6 +210,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             edtNumero2.setHint("Logaritmando");
             edtNumero2.setVisibility(View.VISIBLE);
 
+
         }else if(adapterView.getItemAtPosition(i).toString().equals(POTENCIACAO)){
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.x_elevado_y, getTheme()));
             imgOperacao.setVisibility(View.VISIBLE);
@@ -210,18 +218,22 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             edtNumero2.setHint("Expoente");
             edtNumero2.setVisibility(View.VISIBLE);
 
+
         }else if(adapterView.getItemAtPosition(i).toString().equals(POTENCIA_DE_10)){
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.pot10, getTheme()));
             imgOperacao.setVisibility(View.VISIBLE);
-            edtNumero1.setHint("Potencia");
+            edtNumero1.setHint("Potência");
             edtNumero2.setText("10");
-            edtNumero2.setVisibility(View.INVISIBLE);
+            edtNumero2.setVisibility(View.VISIBLE);
+            validarExibicao(true);
 
         }else if(adapterView.getItemAtPosition(i).toString().equals(RAIZ_QUADRADA)){
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.raiz_quadrada, getTheme()));
             imgOperacao.setVisibility(View.VISIBLE);
             edtNumero1.setHint("Raiz");
-            edtNumero2.setVisibility(View.INVISIBLE);
+            //edtNumero2.setText("Não editável");
+            edtNumero2.setVisibility(View.VISIBLE);
+            validarExibicao(true);
 
         }
     }
@@ -332,8 +344,32 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
     }
 
+   /* private void validarExibicao(String operacaoVerif){
+        if(operacaoVerif.equals(RAIZ_QUADRADA) || operacaoVerif.equals(POTENCIA_DE_10)){
+            edtNumero2.setKeyListener(null); //Não Editável
+            edtNumero2.setEnabled(false);
+        }else{
+            edtNumero2.getKeyListener();
+            edtNumero2.setEnabled(true);
+        }
+
+    }*/
+
+    private void validarExibicao(boolean blok){
 
 
 
+        if(blok){
+            //edtNumero2.setFocusable(false);
+            //edtNumero2.setKeyListener(null);
+            edtNumero2.setEnabled(false);
+            edtNumero2.setHint("Não editável");
+
+        }else {
+            edtNumero2.setFocusable(true);
+            //edtNumero2.getKeyListener();
+            edtNumero2.setEnabled(true);
+        }
+    }
 
 }
