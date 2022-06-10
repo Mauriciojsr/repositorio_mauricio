@@ -115,24 +115,32 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     }
 
                 }else if(operacaoSelecionada.equals(LOGARITMO)){
-
-                        tvResultado.setText(logarimo());
-
+                    if(validarTermosVazios()) {
+                        tvResultado.setText(logaritimo());
+                    }else{
+                        Toast.makeText(MainActivity.this, "Preencha com algum valor!", Toast.LENGTH_SHORT).show();
+                    }
 
                 }else if(operacaoSelecionada.equals(POTENCIACAO)){
-
+                    if(validarTermosVazios()) {
                         tvResultado.setText(potenciacao());
-
+                    }else{
+                        Toast.makeText(MainActivity.this, "Preencha com algum valor!", Toast.LENGTH_SHORT).show();
+                    }
 
                 }else if(operacaoSelecionada.equals(POTENCIA_DE_10)){
-
+                    if(validarRaizPot()) {
                         tvResultado.setText(potencia_10());
-
+                    }else{
+                        Toast.makeText(MainActivity.this, "Preencha com algum valor!", Toast.LENGTH_SHORT).show();
+                    }
 
                 }else if(operacaoSelecionada.equals(RAIZ_QUADRADA)){
-
+                    if(validarRaizPot()) {
                         tvResultado.setText(raiz());
-
+                    }else {
+                        Toast.makeText(MainActivity.this, "Preencha com algum valor!", Toast.LENGTH_SHORT).show();
+                    }
 
                 }else {
                     Toast.makeText(MainActivity.this, "Selecione um número e uma opção matemática!!", Toast.LENGTH_SHORT).show();
@@ -191,28 +199,28 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }else if(adapterView.getItemAtPosition(i).toString().equals(LOGARITMO)){
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.logaritmo, getTheme()));
             imgOperacao.setVisibility(View.VISIBLE);
-            edtNumero1.setHint("Log1");
-            edtNumero2.setHint("Log2");
+            edtNumero1.setHint("Logaritmo");
+            edtNumero2.setHint("Logaritmando");
             edtNumero2.setVisibility(View.VISIBLE);
 
         }else if(adapterView.getItemAtPosition(i).toString().equals(POTENCIACAO)){
-            imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.subtracao, getTheme()));
+            imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.x_elevado_y, getTheme()));
             imgOperacao.setVisibility(View.VISIBLE);
-            edtNumero1.setHint("teste");
-            edtNumero2.setHint("teste");
+            edtNumero1.setHint("Base");
+            edtNumero2.setHint("Expoente");
             edtNumero2.setVisibility(View.VISIBLE);
 
         }else if(adapterView.getItemAtPosition(i).toString().equals(POTENCIA_DE_10)){
-            imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.soma, getTheme()));
+            imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.pot10, getTheme()));
             imgOperacao.setVisibility(View.VISIBLE);
             edtNumero1.setHint("Potencia");
             edtNumero2.setText("10");
-            edtNumero2.setVisibility(View.VISIBLE);
+            edtNumero2.setVisibility(View.INVISIBLE);
 
         }else if(adapterView.getItemAtPosition(i).toString().equals(RAIZ_QUADRADA)){
             imgOperacao.setImageDrawable(getResources().getDrawable(R.drawable.raiz_quadrada, getTheme()));
             imgOperacao.setVisibility(View.VISIBLE);
-            edtNumero1.setHint("raiz");
+            edtNumero1.setHint("Raiz");
             edtNumero2.setVisibility(View.INVISIBLE);
 
         }
@@ -255,7 +263,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         return "O resultado da subtração é: " + res;
     }
 
-    private String logarimo(){
+    private String logaritimo(){
         Double n1 = Double.parseDouble(edtNumero1.getText().toString());
         Double n2 = Double.parseDouble(edtNumero2.getText().toString());
 
@@ -312,6 +320,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             return true;
 
         }else {
+            return false;
+        }
+    }
+
+    private boolean validarRaizPot(){
+        if(!edtNumero1.getText().toString().isEmpty()){
+            return true;
+        }else{
             return false;
         }
     }
