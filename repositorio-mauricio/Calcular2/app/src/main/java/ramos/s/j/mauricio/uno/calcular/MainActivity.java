@@ -18,7 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-
+    public static final String TAG            = "MainActivity";
     public static final String DIVIDIR        = "Dividir";
     public static final String MULTIPLICAR    = "Multiplicar";
     public static final String SOMAR          = "Somar";
@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public static final String POTENCIACAO    = "Potenciação";
     public static final String POTENCIA_DE_10 = "Potencia de 10";
     public static final String RAIZ_QUADRADA  = "Raiz Quadrada";
-    public int ZERO = 0;
-    public int DEZ = 10;
+    public int ZERO                           = 0;
+    public int DEZ                            = 10;
     private TextView tvResultado;
     private Spinner spiOpcoes;
     private EditText edtNumero1, edtNumero2;
@@ -56,6 +56,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         imgOperacao = findViewById(R.id.imgOperacao);
         btnCalular  = findViewById(R.id.btnCalcular);
         imgLimpar   = findViewById(R.id.imgLimpar);
+
+        Log.d(TAG, "onCreate: " + spiOpcoes);
 
         imgOperacao.setVisibility(View.INVISIBLE);
 
@@ -224,33 +226,33 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     private String dividir(){
-        int n1 = Integer.valueOf(edtNumero1.getText().toString()).intValue();
-        int n2 = Integer.valueOf(edtNumero2.getText().toString()).intValue();
-        int res = n1 / n2;
+        Double n1 = Double.parseDouble(edtNumero1.getText().toString());
+        Double n2 = Double.parseDouble(edtNumero2.getText().toString());
+        Double res = n1 / n2;
 
         return "O resultado da divisão é: " + res;
     }
 
     private String multiplicar(){
-        int n1 = Integer.valueOf(edtNumero1.getText().toString()).intValue();
-        int n2 = Integer.valueOf(edtNumero2.getText().toString()).intValue();
-        int res = n1 * n2;
+        Double n1 = Double.parseDouble(edtNumero1.getText().toString());
+        Double n2 = Double.parseDouble(edtNumero2.getText().toString());
+        Double res = n1 * n2;
 
         return "O resultado da multiplicação é: " + res;
     }
 
     private String somar(){
-        int n1 = Integer.valueOf(edtNumero1.getText().toString()).intValue();
-        int n2 = Integer.valueOf(edtNumero2.getText().toString()).intValue();
-        int res = n1+n2;
+        Double n1 = Double.parseDouble(edtNumero1.getText().toString());
+        Double n2 = Double.parseDouble(edtNumero2.getText().toString());
+        Double res = n1 + n2;
 
         return "O resultado da soma é: " + res;
     }
 
     private String subtrair(){
-        int n1 = Integer.valueOf(edtNumero1.getText().toString()).intValue();
-        int n2 = Integer.valueOf(edtNumero2.getText().toString()).intValue();
-        int res = n1 - n2;
+        Double n1 = Double.parseDouble(edtNumero1.getText().toString());
+        Double n2 = Double.parseDouble(edtNumero2.getText().toString());
+        Double res = n1 - n2;
 
         return "O resultado da subtração é: " + res;
     }
@@ -307,7 +309,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     private boolean validarDivisor(){
-        int n2 = Integer.valueOf(edtNumero2.getText().toString());
+        Double n2 = Double.parseDouble(edtNumero2.getText().toString());
         if(n2 != ZERO){
             return true;
 
