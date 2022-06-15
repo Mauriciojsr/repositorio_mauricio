@@ -1,10 +1,6 @@
 package ramos.s.j.mauricio.conceitosclassesabstratas;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
-
-public abstract class Forma extends android.app.Activity {
+public abstract class Forma {
     private double medida[]; // array de medidas
 
     // Construtor parametrizado
