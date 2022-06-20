@@ -1,5 +1,7 @@
 package ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces.ui;
 
+/*Java - Guia do Programador - 3ª Edição https://github.com/pjandl/jgp3*/
+
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
