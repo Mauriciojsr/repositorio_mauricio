@@ -11,9 +11,9 @@ import android.view.ViewGroup;
 import ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces.R;
 
 
-public class MensagemFragment extends Fragment {
+public class MensagemFrag extends Fragment {
 
-    public MensagemFragment() {}
+    public MensagemFrag() {}
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

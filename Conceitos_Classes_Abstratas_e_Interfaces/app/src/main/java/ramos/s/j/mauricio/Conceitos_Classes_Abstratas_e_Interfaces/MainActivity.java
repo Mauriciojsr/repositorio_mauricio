@@ -4,18 +4,16 @@ package ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces;
 
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces.ui.CircunferenciaFrag;
-import ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces.ui.MensagemFragment;
+import ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces.ui.MensagemFrag;
 import ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces.ui.RetanguloFrag;
 import ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces.ui.TrianguloFrag;
 
-/*Java - Guia do Programador - 3ª Edição https://github.com/pjandl/jgp3*/
 
 //public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 public class MainActivity extends FragmentActivity implements AdapterView.OnItemSelectedListener{
@@ -82,7 +80,7 @@ public class MainActivity extends FragmentActivity implements AdapterView.OnItem
 
         } else {
             fragmentManager.beginTransaction()
-                    .replace(R.id.mainFragment, MensagemFragment.class, null)
+                    .replace(R.id.mainFragment, MensagemFrag.class, null)
                     .setReorderingAllowed(true)
                     .addToBackStack("MensagemFrag")
                     .commit();

@@ -5,13 +5,19 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Conceitos_Classes_Abstratas_e_Interfaces"
+        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ConceitosClassesAbstratas">
-        <activity
-            android:name="ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces.MainActivity"
-            android:exported="false" />
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
