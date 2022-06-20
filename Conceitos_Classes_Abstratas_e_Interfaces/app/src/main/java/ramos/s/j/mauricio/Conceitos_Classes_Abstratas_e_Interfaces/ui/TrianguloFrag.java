@@ -12,7 +12,7 @@ import ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces.R;
 
 
 public class TrianguloFrag extends Fragment {
-    
+
     public TrianguloFrag() {}
 
     @Override
