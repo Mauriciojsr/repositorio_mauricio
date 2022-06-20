@@ -11,10 +11,10 @@ import android.view.ViewGroup;
 import ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces.R;
 
 
-public class BlankFragment extends Fragment {
+public class BlankFrag extends Fragment {
 
 
-    public BlankFragment() {}
+    public BlankFrag() {}
 
 
     @Override

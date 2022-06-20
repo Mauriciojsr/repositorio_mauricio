@@ -3,11 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.BlankFrag">
+    tools:context=".ui.MensagemFragment">
 
     <TextView
+        android:id="@+id/tvMensagem"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="" />
+        android:text="@string/tv_mensagem"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
 
 </FrameLayout>
