@@ -1,4 +1,4 @@
-package ramos.s.j.mauricio.conceitosclassesabstratas;
+package ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces;
 
 public class Triangulo extends Forma {
     public Triangulo(double l1, double l2, double l3) {

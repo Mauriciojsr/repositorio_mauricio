@@ -1,10 +1,11 @@
-package ramos.s.j.mauricio.conceitosclassesabstratas;
+package ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces;
 
 public abstract class Forma {
     private double medida[]; // array de medidas
 
     // Construtor parametrizado
     public Forma(int numMedidas) {
+
         medida = new double[numMedidas]; // aloca array de medidas
     }
 
@@ -17,6 +18,7 @@ public abstract class Forma {
     }
 
     public int getNumMedidas() { // retorna no. de medidas
+
         return medida.length;
     }
 

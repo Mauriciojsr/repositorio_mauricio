@@ -1,4 +1,4 @@
-package ramos.s.j.mauricio.conceitosclassesabstratas;
+package ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces;
 
 import static java.lang.Math.*;
 
@@ -11,11 +11,13 @@ public class Circunferencia extends Forma {
     // implementação do método abstrato area()
     @Override
     public double area() {
+
         return PI * Math.pow(getMedida(0), 2);
     }
 
     // novo método para ajuste do raio
     public void setRaio(double raio) {
+
         setMedida(0, raio);
     }
 
@@ -27,6 +29,7 @@ public class Circunferencia extends Forma {
 
     // comparador não-estático
     public int comparador2(Circunferencia b) {
+
         return (int) (this.area() - b.area());
     }
 }
