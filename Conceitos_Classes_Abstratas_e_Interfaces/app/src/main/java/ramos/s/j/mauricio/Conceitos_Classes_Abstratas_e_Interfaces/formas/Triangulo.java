@@ -1,4 +1,6 @@
-package ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces;
+package ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces.formas;
+
+/*Java - Guia do Programador - 3ª Edição https://github.com/pjandl/jgp3*/
 
 public class Triangulo extends Forma {
     public Triangulo(double l1, double l2, double l3) {

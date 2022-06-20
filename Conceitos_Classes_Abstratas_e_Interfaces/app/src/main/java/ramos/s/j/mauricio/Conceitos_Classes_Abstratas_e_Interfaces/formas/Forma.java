@@ -1,4 +1,6 @@
-package ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces;
+package ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces.formas;
+
+/*Java - Guia do Programador - 3ª Edição https://github.com/pjandl/jgp3*/
 
 public abstract class Forma {
     private double medida[]; // array de medidas
@@ -10,19 +12,21 @@ public abstract class Forma {
     }
 
     // Métodos
-    public double getMedida(int i) { // obtém uma medida
+    public double getMedida(int i) {
+        // obtém uma medida
         if (i < 0 || i >= medida.length) {
             throw new RuntimeException("Numero invalido de medida.");
         }
         return medida[i];
     }
 
-    public int getNumMedidas() { // retorna no. de medidas
-
+    public int getNumMedidas() {
+        // retorna no. de medidas
         return medida.length;
     }
 
-    protected void setMedida(int i, double m) { // ajusta uma medida
+    protected void setMedida(int i, double m) {
+        // ajusta uma medida
         if (i < 0 || i >= medida.length) {
             throw new RuntimeException("Numero invalido de medida.");
         }
@@ -33,7 +37,7 @@ public abstract class Forma {
     }
 
     @Override
-    public String toString() { // representação textual
+    public String toString() {// representação textual
         StringBuffer sb = new StringBuffer(getClass().getName());
         sb.append("[medidas:");
         for (int i = 0; i < medida.length - 1; i++) {
@@ -46,5 +50,5 @@ public abstract class Forma {
     }
 
     // método abstrato que determinara área
-    public abstract double area();
+    public abstract double area();//Assinatura do método
 }

@@ -1,4 +1,6 @@
-package ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces;
+package ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces.formas;
+
+/*Java - Guia do Programador - 3ª Edição https://github.com/pjandl/jgp3*/
 
 public class Retangulo extends Forma {
     public Retangulo(double altura, double largura) {
@@ -10,11 +12,13 @@ public class Retangulo extends Forma {
     // implementação do método abstrato area()
     @Override
     public double area() {
+
         return getMedida(0) * getMedida(1);
     }
 
     // implementação de operação específica extra
     public double perimetro() {
+
         return 2 * (getMedida(0) + getMedida(1));
     }
 }

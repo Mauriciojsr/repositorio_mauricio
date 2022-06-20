@@ -1,10 +1,17 @@
 package ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces;
 
+/*Java - Guia do Programador - 3ª Edição https://github.com/pjandl/jgp3*/
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import ramos.s.j.mauricio.conceitosclassesabstratas.R;
+import ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces.formas.Circunferencia;
+import ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces.formas.Forma;
+import ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces.formas.Retangulo;
+import ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces.formas.Triangulo;
+
+
 
 public class MainActivity extends AppCompatActivity {
 

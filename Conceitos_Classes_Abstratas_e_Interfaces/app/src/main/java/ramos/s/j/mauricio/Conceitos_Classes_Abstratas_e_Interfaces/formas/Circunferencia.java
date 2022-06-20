@@ -1,4 +1,6 @@
-package ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces;
+package ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces.formas;
+
+/*Java - Guia do Programador - 3ª Edição https://github.com/pjandl/jgp3*/
 
 import static java.lang.Math.*;
 
