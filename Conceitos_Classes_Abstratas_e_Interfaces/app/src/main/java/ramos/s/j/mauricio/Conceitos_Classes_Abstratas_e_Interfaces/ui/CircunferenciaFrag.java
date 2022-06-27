@@ -19,18 +19,12 @@ import java.text.DecimalFormat;
 import ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces.R;
 import ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces.formas.Circunferencia;
 
-
 public class CircunferenciaFrag extends Fragment {
     private ImageButton imgbLimpar, imgbCalcular;
     private TextView tvRaioCircunferencia;
     private EditText edtRaio;
 
-
-
     public CircunferenciaFrag() {}
-
-
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

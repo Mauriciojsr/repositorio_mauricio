@@ -14,7 +14,6 @@ import ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces.ui.MensagemFr
 import ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces.ui.RetanguloFrag;
 import ramos.s.j.mauricio.Conceitos_Classes_Abstratas_e_Interfaces.ui.TrianguloFrag;
 
-
 //public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 public class MainActivity extends FragmentActivity implements AdapterView.OnItemSelectedListener{
     static final String TAG                     = "MainActivity";
@@ -41,7 +40,6 @@ public class MainActivity extends FragmentActivity implements AdapterView.OnItem
         spiOpcoes.setOnItemSelectedListener(this);
 
         fragmentManager = getSupportFragmentManager();
-
 
     }
 
