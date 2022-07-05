@@ -25,6 +25,7 @@ public class TrianguloTest {
     public void deveriaCalcularUmTriangulo(){
         double areaPapel = 1.732;
 
+        //Lados (L1, L2, L3) do triângulo
         triangulo.setMedida(0, 2);
         triangulo.setMedida(1, 2);
         triangulo.setMedida(2, 2);
