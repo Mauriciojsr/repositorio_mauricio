@@ -13,15 +13,18 @@ public class Circunferencia extends Forma {
     }*/
 
     public Circunferencia(){
+
         super(TAMANHO_ARRAY_INFO_CALCULO_AREA);
     }
 
     public int getTamanhoArrayInfoCalculoArea(){
+
         return TAMANHO_ARRAY_INFO_CALCULO_AREA;
     }
 
     @Override
     public double area() {
+
         return Math.PI * Math.pow(getMedida(POSICAO_ZERO), EXPOENTE_2);
     }
 }

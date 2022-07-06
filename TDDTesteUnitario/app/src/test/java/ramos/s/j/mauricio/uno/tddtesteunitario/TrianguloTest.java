@@ -8,16 +8,18 @@ import org.junit.Test;
 import ramos.s.j.mauricio.uno.tddtesteunitario.forma.Triangulo;
 
 public class TrianguloTest {
-    public static final double LADO_1 = 1;
-    public static final double LADO_2 = 2;
-    public static final double LADO_3 = 3;
-    double DIFERENCA_ACEITAVEL        = 0.0001;
-    private static Triangulo triangulo = new Triangulo();
+    double DIFERENCA_ACEITAVEL                                         = 0.0001;
+    private Triangulo triangulo;
+    public static final int POSICA0_UM                                 = 0;
+    public static final int POSICA0_DOIS                               = 1;
+    public static final int POSICA0_TRES                               = 2;
+    private static final int DIVIDIDO_POR_2                            = 2;
 
     public TrianguloTest() {}
 
     @Before
     public void objeto(){
+
         triangulo = new Triangulo();
     }
 
@@ -26,16 +28,16 @@ public class TrianguloTest {
         double areaPapel = 1.732;
 
         //Lados (L1, L2, L3) do triângulo
-        triangulo.setMedida(0, 2);
-        triangulo.setMedida(1, 2);
-        triangulo.setMedida(2, 2);
+        triangulo.setMedida(POSICA0_DOIS, POSICA0_TRES);
+        triangulo.setMedida(POSICA0_DOIS, POSICA0_TRES);
+        triangulo.setMedida(POSICA0_TRES, POSICA0_TRES);
 
-        double perimetro     = triangulo.getMedida(0) + triangulo.getMedida(1) + triangulo.getMedida(2);
+        double perimetro     = triangulo.getMedida(POSICA0_UM) + triangulo.getMedida(POSICA0_DOIS) + triangulo.getMedida(POSICA0_TRES);
 
-        double semiPerimetro = perimetro / 2;
+        double semiPerimetro = perimetro / DIVIDIDO_POR_2;
 
-        double area1         = semiPerimetro * (semiPerimetro - triangulo.getMedida(0)) * (semiPerimetro - triangulo.getMedida(1))
-                * (semiPerimetro - triangulo.getMedida(2));
+        double area1         = semiPerimetro * (semiPerimetro - triangulo.getMedida(POSICA0_UM)) * (semiPerimetro - triangulo.getMedida(POSICA0_DOIS))
+                * (semiPerimetro - triangulo.getMedida(POSICA0_TRES));
 
         double areaFinal     = Math.sqrt(area1);
 
