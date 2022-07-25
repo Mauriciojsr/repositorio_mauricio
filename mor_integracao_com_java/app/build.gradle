@@ -8,7 +8,11 @@ android {
     defaultConfig {
         applicationId "ramos.s.j.mauricio.uno.morintegraocomjava"
         minSdk 23
+<<<<<<< HEAD
         targetSdk 29
+=======
+        targetSdk 32
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
         versionCode 1
         versionName "1.0"
 

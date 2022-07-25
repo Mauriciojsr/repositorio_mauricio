@@ -1,22 +1,32 @@
 package ramos.s.j.mauricio.uno.morintegraocomjava.databae_app;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
 import android.content.Context;
 import android.os.Build;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.room.RoomDatabase;
+<<<<<<< HEAD
 import androidx.room.TypeConverter;
 import androidx.room.TypeConverters;
+=======
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
+<<<<<<< HEAD
 import ramos.s.j.mauricio.uno.morintegraocomjava.databae_app.converter.Converters;
 
 @TypeConverters({Converters.class})
 
+=======
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
 public abstract class DatabaseApp extends RoomDatabase {
     private static final String DB_NAME = "db_app.db";
     private static volatile DatabaseApp sInstance;
