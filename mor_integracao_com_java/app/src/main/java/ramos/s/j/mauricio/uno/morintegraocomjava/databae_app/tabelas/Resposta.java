@@ -1,11 +1,16 @@
 package ramos.s.j.mauricio.uno.morintegraocomjava.databae_app.tabelas;
 
+import static androidx.room.ForeignKey.CASCADE;
+
 import androidx.room.Entity;
+import androidx.room.ForeignKey;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "tblResposta"
-        , indices = {@Index(value = "id", unique = true)})
+        , indices = {@Index(value = "id", unique = true)}
+        , foreignKeys = {@ForeignKey(entity = Pergunta.class, parentColumns = "id",
+                    childColumns = "pergunta_id", onUpdate = CASCADE, onDelete = CASCADE)})
 
 public class Resposta {
     @PrimaryKey(autoGenerate = true)
