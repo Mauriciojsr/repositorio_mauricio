@@ -55,6 +55,7 @@ public class InstituicaoDeEnsino {
 
     public String mostrarDados(){
         String msg = "Razão Social: "
+<<<<<<< HEAD
         + razãoSocial
         + "\nCnpj: "
         + cnpj
@@ -65,6 +66,18 @@ public class InstituicaoDeEnsino {
         + "\nTelefone: "
         + telefone
         + "\n";
+=======
+        + getRazãoSocial()
+        + "\nCnpj: "
+        + getCnpj()
+        + "\nEndereço: "
+        + getEndereço()
+        + "\nCidade: "
+        + getCidade()
+        + "\nTelefone: "
+        + getTelefone()
+        + "\n------------------------------";
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
 
         return msg;
 

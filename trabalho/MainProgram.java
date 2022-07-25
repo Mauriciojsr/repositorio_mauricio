@@ -1,8 +1,11 @@
 import java.util.Scanner;
 
+<<<<<<< HEAD
 import lista_encadeada.Alunos;
 import lista_encadeada.Lista_Simples;
 
+=======
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
 public class MainProgram {
 
 
@@ -16,7 +19,11 @@ public class MainProgram {
                     + "\n1-Cadastrar Professor"
                     + "\n2-Cadastrar Aluno"
                     + "\n3-Editar dados do Aluno");
+<<<<<<< HEAD
             System.out.println("Digite o número da ação que deseja executar: ");
+=======
+            System.out.print("Digite o número da ação que deseja executar: ");
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
             Scanner menu = new Scanner(System.in);
             int acao = menu.nextInt();
     
@@ -27,13 +34,21 @@ public class MainProgram {
                     int fim2 = 0;
     
                     Scanner nomeA= new Scanner(System.in);
+<<<<<<< HEAD
                     System.out.println("\nDigite o nome do Aluno:");
+=======
+                    System.out.print("\nDigite o nome do Aluno: ");
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
                     String nomeAluno = nomeA.nextLine();
                     a.setNome(nomeAluno);
                     System.out.println("\nO nome é "+a.getNome());
     
                     Scanner matriculaM = new Scanner(System.in);
+<<<<<<< HEAD
                     System.out.println("\nDigite a Matrícula do Aluno:");
+=======
+                    System.out.print("\nDigite a Matrícula do Aluno: ");
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
                     String matricula = matriculaM.nextLine();
                     a.setNome(matricula);
                     System.out.println("\na Matriucla é "+ a.getMatricula());

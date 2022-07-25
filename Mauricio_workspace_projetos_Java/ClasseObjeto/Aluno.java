@@ -37,12 +37,21 @@ public class Aluno {
 
     public String mostrarDados(){
         String msg = "Nome do Aluno: "
+<<<<<<< HEAD
         + nome
         + "\nMatricula: "
         + matricula
         + "\nID: "
         + id
         + "\n";
+=======
+        + getNome()
+        + "\nMatricula: "
+        + getMatricula()
+        + "\nID: "
+        + getid()
+        + "\n------------------------------";
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
 
         return msg;
         
@@ -53,8 +62,13 @@ public class Aluno {
         System.out.println("-------------------"); */
     }
 
+<<<<<<< HEAD
     public static void limparTela() {
     }
+=======
+    /*public static void limparTela() {
+    }*/
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
   
 }
 

@@ -60,12 +60,54 @@ public class CalculoBasico{
         + multiplicação
         + "\nDivisão: "
         + divisão
+<<<<<<< HEAD
         + "\n";
+=======
+        + "\n------------------------------";
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
 
         return msg;
 
     }
 
+<<<<<<< HEAD
+=======
+/* metodo do professor
+public class CalculoBasico {
+    private long somar, subtrair, multiplicar, dividir;
+
+    public CalculoBasico(){}
+
+    public long somar(long x, long y){
+        this.somar = x + y;
+        return this.somar;
+    }
+
+    public long subtrair(long x, long y){
+        this.subtrair = x - y;
+        return this.subtrair;
+    }
+
+    public long multiplicar(long x, long y){
+        this.multiplicar = x * y;
+        return this.multiplicar;
+    }
+
+    public long dividir(long x, long y){
+        
+        if(y != 0){
+            this.dividir = x / y;
+            return this.dividir;
+
+        } else{
+            return 0;
+        }
+    }
+
+}
+*/
+
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
     
     /*public void mostrarDados(){
         System.out.println("Programa Matemático");

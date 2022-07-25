@@ -39,12 +39,21 @@ public class Disciplina {
 
     public String mostrarDados(){
         String msg = "Código da Disciplina: "
+<<<<<<< HEAD
         + código
         + "\nNome da Matéria: "
         + nome
         + "\nCarga Horária: "
         + cargaHorária
         + "\n";
+=======
+        + getCódigo()
+        + "\nNome da Matéria: "
+        + getNome()
+        + "\nCarga Horária: "
+        + getCargaHorária()
+        + "\n------------------------------";
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
 
         return msg;
 

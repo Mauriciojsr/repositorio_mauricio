@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Calcular</string>
+<<<<<<< HEAD:calcular/app/src/main/res/values/strings.xml
+=======
+
+    <string-array name="operacoes_matematicas">
+        <item> </item>
+        <item>Dividir</item>
+        <item>Multiplicar</item>
+        <item>Somar</item>
+        <item>Logaritmo</item>
+        <item>Potenciação</item>
+        <item>Potência de 10</item>
+        <item>Raiz Quadrada</item>
+
+    </string-array>
+
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c:Calcular2/app/src/main/res/values/strings.xml
+</resources>

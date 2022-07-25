@@ -38,12 +38,21 @@ public class LaboratorioDeInformatica {
 
     public String mostrarDados(){
         String msg = "Nome do Laboratório: "
+<<<<<<< HEAD
         + nome
         + "\nBloco: "
         + bloco
         + "\nQuantidade de Computadores: "
         + quantidadeDeComputadores
         + "\n";
+=======
+        + getNome()
+        + "\nBloco: "
+        + getBloco()
+        + "\nQuantidade de Computadores: "
+        + getQuantidadeDeComputadores()
+        + "\n------------------------------";
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
 
         return msg;
 

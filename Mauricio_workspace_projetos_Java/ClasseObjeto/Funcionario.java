@@ -46,6 +46,7 @@ public class Funcionario {
 
     public String mostrarDados(){
         String msg = "Nome do Funcionário: "
+<<<<<<< HEAD
         + nome
         + "\nEndereço: "
         + endereço
@@ -54,6 +55,16 @@ public class Funcionario {
         + "\nData Admissão: "
         + dataAdmissão
         + "\n";
+=======
+        + getNome()
+        + "\nEndereço: "
+        + getEndereço()
+        + "\nSalário: "
+        + getSalário()
+        + "\nData Admissão: "
+        + getDataAdmissão()
+        + "\n------------------------------";
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
 
         return msg;
 
