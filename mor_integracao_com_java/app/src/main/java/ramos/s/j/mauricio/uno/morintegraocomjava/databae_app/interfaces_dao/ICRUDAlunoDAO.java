@@ -18,6 +18,7 @@ public interface ICRUDAlunoDAO {
     public void insertAluno(Aluno tblAluno);
 
     @Query("SELECT * FROM tblAluno where id = :id");
+    public Aluno getEspecificaAlunoByID(int id);
 
     @Query("SELECT * FROM tblAluno ORDER BY id DESC")
     public List<Aluno> getAllAlunos();
