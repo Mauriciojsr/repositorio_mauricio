@@ -4,7 +4,7 @@ import androidx.room.Entity;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "tblAluno", indices = {@Index(value = "id", unique = true), @Index(value = "nome")
+@Entity(tableName = "tbl_aluno", indices = {@Index(value = "id", unique = true), @Index(value = "nome")
        , @Index(value = "celular"), @Index(value = "email"), @Index(value = "gitHubUsuario")})
 
 public class Aluno {
