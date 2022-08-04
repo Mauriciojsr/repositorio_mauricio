@@ -1,0 +1,183 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produto</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <!--Importa icones-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <table>
+        <tr>
+          <td align="center">
+            <a href="index.html">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/33/33715.png"
+                width="42"
+                height="36"
+              />
+              <br />
+              Usuário
+            </a>
+          </td>
+          <td align="center">
+            <a href="Produto.html">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/3134/3134338.png"
+                width="36"
+                height="36"
+              />
+              <br />
+              Produto
+            </a>
+          </td>
+        </tr>
+      </table>
+
+      <h1 align="center">Cadastro de Produtos</h1>
+      <form action="" method="post">
+        <hr />
+        <fieldset>
+          <legend><b>Dados Produto</b></legend>
+          <table cellspacing="10">
+            <tr>
+              <td>
+                <label for="descrição">Descrição:</label>
+              </td>
+              <td align="left">
+                <input type="text" name="descrição" />
+              </td>
+              <td>
+                <label for="fabricante">Fabricante:</label>
+              </td>
+              <td align="left">
+                <input type="text" name="fabricante" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="datf">Data de Fabricação:</label>
+              </td>
+              <td align="left">
+                <input type="text" name="datf" />
+              </td>
+              <td>
+                <label for="datv">Data de Validade:</label>
+              </td>
+              <td align="left">
+                <input type="text" name="datv" />
+              </td>
+            </tr>
+          </table>
+        </fieldset>
+        <hr />
+        <br />
+        <fieldset>
+          <legend><b>Informações Adicionais</b></legend>
+          <table>
+            <tr>
+              <td>
+                <label for="código">Código de Barras:</label>
+              </td>
+              <td align="left">
+                <input type="text" name="código" />
+              </td>
+              <td>
+                <label for="distribuidora">Distribuidora:</label>
+              </td>
+              <td align="left">
+                <input type="text" name="distribuidora" />
+              </td>
+              <td>
+                <label for="vendedor">Nome do Vendedor:</label>
+              </td>
+              <td align="left">
+                <input type="text" name="vendedor" />
+              </td>
+            </tr>
+          </table>
+        </fieldset>
+        <hr />
+        <br />
+        <fieldset>
+          <legend><b>Valores Produto</b></legend>
+          <tr>
+            <td>
+              <label for="valorc">Valor de Compra:</label>
+            </td>
+            <td align="left">
+              <input type="text" name="valorc" />
+            </td>
+            <td>
+              <label for="valorv">Valor de Venda:</label>
+            </td>
+            <td align="left">
+              <input type="text" name="valorv" />
+            </td>
+            <td>
+              <label for="qtd">Quantidade:</label>
+            </td>
+            <td align="left">
+              <input type="text" name="qtd" />
+            </td>
+          </tr>
+        </fieldset>
+        <hr />
+        <br />
+        <fieldset align="center">
+          <legend><b>Imagem do Produto</b></legend>
+          <tr>
+            <td>
+              <a>
+                <img
+                  src="https://explosaodeamor.com.br/uploads/fotos_produtos/20200716_ehkkii3l.jpg"
+                  width="250"
+                  height="250"
+                />
+              </a>
+              <a>
+                <img
+                  src="https://explosaodeamor.com.br/uploads/fotos_produtos/20200716_ehkkii3l.jpg"
+                  width="230"
+                  height="230"
+                />
+              </a>
+              <a>
+                <img
+                  src="https://explosaodeamor.com.br/uploads/fotos_produtos/20200716_ehkkii3l.jpg"
+                  width="250"
+                  height="250"
+                />
+              </a>
+              <a>
+                <img
+                  src="https://explosaodeamor.com.br/uploads/fotos_produtos/20200716_ehkkii3l.jpg"
+                  width="230"
+                  height="230"
+                />
+              </a>
+            </td>
+          </tr>
+        </fieldset>
+        <br />
+        <div align="right">
+            <input type="reset" class="btn btn-warning" value=Limpar>
+            <button type="button" class="btn btn-success">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

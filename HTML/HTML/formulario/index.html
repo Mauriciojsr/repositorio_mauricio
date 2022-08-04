@@ -1,0 +1,272 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu site - Página Inicial</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <!--Importa icones-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <!--Inicio do Menu-->
+  <body>
+    <div class="container">
+      <table>
+        <tr>
+          <td align="center">
+            <a href="index.html">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/33/33715.png"
+                width="42"
+                height="36"
+              />
+              <br />
+              Usuário
+            </a>
+          </td>
+          <td align="center">
+            <a href="Produto.html">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/3134/3134338.png"
+                width="36"
+                height="36"
+              />
+              <br />
+              Produto
+            </a>
+          </td>
+        </tr>
+      </table>
+      <h1 align="center">Cadastro de Usuário</h1>
+      <hr />
+      <form action="" method="post">
+        <!--Dados Pessoais-->
+        <fieldset>
+          <legend><b>Dados Pessoais</b></legend>
+          <table cellspace="10">
+            <hr>
+            <tr>
+              <td>
+                <label for="nome">Nome:</label
+                ><!--Nome do campo-->
+              </td>
+              <td align="left">
+                <input
+                  type="text"
+                  name="nome"
+                /><!--Abre o campo para adicionar dados-->
+              </td>
+              <td>
+                <label for="sobrenome">Sobrenome</label>
+              </td>
+              <td align="left">
+                <input type="text" name="sobrenome" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Data de Nascimento</label>
+              </td>
+              <td align="left">
+                <!--Campo para adicionar a data-->
+                <input
+                  type="text"
+                  name="dia"
+                  size="2"
+                  maxlength="2"
+                  value="dd"
+                />
+                <input
+                  type="text"
+                  name="mês"
+                  size="2"
+                  maxlength="2"
+                  value="mm"
+                />
+                <input
+                  type="text"
+                  name="ano"
+                  size="4"
+                  maxlength="4"
+                  value="aaaa"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="rg">Rg:</label>
+              </td>
+              <td align="left">
+                <input type="text" name="rg" size="13" maxlength="13" />
+              </td>
+              <td>
+                <label>CPF:</label>
+              </td>
+              <td align="left">
+                <input type="text" name="cpf" size="9" maxlength="9" />-<input
+                  type="cpf2"
+                  size="2"
+                  maxlength="2"
+                />
+              </td>
+            </tr>
+          </table>
+        </fieldset>
+        <hr />
+        <br />
+        <!--Dados de endereço-->
+        <fieldset>
+          <legend><b>Dados de Endereço</b></legend>
+          <table cellspacing="10">
+            <hr>
+            <tr>
+              <td>
+                <label for="rua">Rua:</label>
+              </td>
+              <td align="lefet">
+                <input type="text" name="rua" />
+              </td>
+              <td>
+                <label for="numero">Numero:</label>
+              </td>
+              <td align="lefet">
+                <input type="text" name="numero" size="6" maxlength="6" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="bairro">Bairro:</label>
+              </td>
+              <td>
+                <input type="text" name="bairro" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="estado">Estado:</label>
+              </td>
+              <td align="left">
+                <select name="estado" id="uf">
+                  <option value="Selecione">--Selecione uma opção--</option>
+                  <option value="ac">Acre</option>
+                  <option value="al">Alagoas</option>
+                  <option value="am">Amazonas</option>
+                  <option value="ap">Amapá</option>
+                  <option value="ba">Bahia</option>
+                  <option value="ce">Ceará</option>
+                  <option value="df">Distrito Federal</option>
+                  <option value="es">Espirito Santo</option>
+                  <option value="go">Goiás</option>
+                  <option value="ma">Maranhão</option>
+                  <option value="mt">Mato Grosso</option>
+                  <option value="ms">Mato Grosso do Sul</option>
+                  <option value="mg">Minas Gerais</option>
+                  <option value="pa">Pará</option>
+                  <option value="pb">Paraíba</option>
+                  <option value="pe">Pernambuco</option>
+                  <option value="pr">Paraná</option>
+                  <option value="pi">Piauí</option>
+                  <option value="rj">Rio de Janeiro</option>
+                  <option value="rn">Rio Grande do Norte</option>
+                  <option value="ro">Rondonia</option>
+                  <option value="rs">Rio Grande do Sul</option>
+                  <option value="rr">Roraima</option>
+                  <option value="sc">Santa Catarina</option>
+                  <option value="se">Sergipe</option>
+                  <option value="sp">São Paulo</option>
+                  <option value="to">Tocantis</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="cidade">Cidade:</label>
+              </td>
+              <td align="left">
+                <input type="text" name="cidade" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="cep">CEP:</label>
+              </td>
+              <td align="left">
+                <input type="text" name="cep" size="5" maxlength="5" />-<input
+                  type="text"
+                  name="cep2"
+                  size="3"
+                  maxlength="3"
+                />
+              </td>
+            </tr>
+          </table>
+        </fieldset>
+        <hr />
+        <br />
+
+        <!--Dados de Login-->
+
+        <fieldset>
+          <legend><b>Dados de Login:</b></legend>
+          <table cellspacing="10">
+            <hr>
+            <tr>
+              <td>
+                <label for="email">Email:</label>
+              </td>
+              <td align="left">
+                <input type="text" name="email" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="img">Imagem:</label>
+              </td>
+              <td>
+                <input type="file" name="img" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="login">Nome de Usuário</label>
+              </td>
+              <td align="left">
+                <input type="text" name="login" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="pass">Senha:</label>
+              </td>
+              <td align="left">
+                <input type="password" name="pass" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="passconf">Confirme a Senha</label>
+              </td>
+              <td align="left">
+                <input type="password" name="passconf" />
+              </td>
+            </tr>
+          </table>
+        </fieldset>
+        <hr />
+        <br />
+        <input type="submit" />
+        <input type="reset" value="limpar" />
+      </form>
+    </div>
+  </body>
+</html>

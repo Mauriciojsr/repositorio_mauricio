@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu site - Contato</title>
+    <link rel="icon" type="image/png" href="/img/Cs.png">
+
+</head>
+<body style="background-color:cornsilk; margin: 0%">
+    <img src="/img/site.png" alt="" width="100%" height="150px">
+    <a href="index.html" style="padding: 20px;">
+        <b>
+            <img src="/img/Home.png" width ="40" height ="40" alt="">
+        </b>
+    </a> 
+    <a href="somos.html" style="padding: 20px;">
+        <b>
+            <img src="/img/somos.png" width ="40" height ="40" alt="">
+        </b>
+    </a>
+    <a href="contato.html" style="padding: 20px;">
+        <b>
+            <img src="/img/contato.png" width="40" height="40" alt="">
+        </b>
+    </a>
+    <br>
+
+<h2>Entre em contato conosco:</h2>
+<form>
+    <p>
+        Nome:<br>
+            <input type="text" size="40" name="name">
+    </p>
+    <p>
+        E-mail: <br>
+        <input type="text" size="40" name="mail">
+    </p>
+    <p>
+        Comentário:<br>
+        <input type="text" size="40" name="comentario">
+    </p>
+    <p>
+        <input type="submit" name="btnEnviar" value="Enviar">
+        <input type="reset" name="btnApagar" value="Apagar">
+    </p>
+
+
+</form>
+
+<h2>Configuração</h2>
+<form action="acao.php" method="post">
+    Limiar:
+    <input type="range" name="limiar" min="0" max="100" value="50">
+    <input type="submit" value="Enviar">
+
+</form>
+
+<form name="numero" id="num" method="get">
+    <input type="number" name="num" min="0" max="10" step="1">
+    <input type="submit" value="Enviar">
+</form>
+
+<div align = "center">
+    <form name="calendario" id="cadID" method="get">
+        Selecione uma hora <input type="time" name="miHora">
+        <input type="submit" name="" id="" value="OK">
+    </form>
+
+</div>
+
+<div align = "center">
+    <form style="background-color: hsl(237, 43%, 90%);">
+        Esta é uma checkBox:
+        <input type="checkbox" name="cor" id="Selcor">
+        Este é um Radio Button
+        <input type="radio" name="cor" id="Selcor">
+        <input type="submit" value="Ok">
+    </form>
+</div>
+
+<di align = "center">
+    <form style="background-color: hwb(340, 32%, 3%);">
+        Seleciona Data, hora:
+        <input type="datetime-local" name="dttm" id="dttm">
+        <input type="submit" value="Ok">
+    </form>
+</di>
+
+<span style="color: black;">
+    <marquee behavior="32%" direction="scrool">
+        <b>
+            <h1>Aula de HTML!!!</h1>
+            <img src="/img/Cs.png" width ="200" height ="200" alt="">
+        </b>
+    </marquee>
+   
+
+</span>
+    
+</body>
+</html>
