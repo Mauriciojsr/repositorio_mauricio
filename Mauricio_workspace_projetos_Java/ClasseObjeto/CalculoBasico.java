@@ -60,12 +60,18 @@ public class CalculoBasico{
         + multiplicação
         + "\nDivisão: "
         + divisão
+<<<<<<< HEAD
+        + "\n";
+=======
         + "\n------------------------------";
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
 
         return msg;
 
     }
 
+<<<<<<< HEAD
+=======
 /* metodo do professor
 public class CalculoBasico {
     private long somar, subtrair, multiplicar, dividir;
@@ -101,6 +107,7 @@ public class CalculoBasico {
 }
 */
 
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
     
     /*public void mostrarDados(){
         System.out.println("Programa Matemático");

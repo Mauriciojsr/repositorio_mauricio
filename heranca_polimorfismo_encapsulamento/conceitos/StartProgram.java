@@ -1,5 +1,11 @@
 package conceitos;
 
+<<<<<<< HEAD
+public class StartProgram {
+    
+    public static void main(String[] args) {
+        
+=======
 import java.util.Scanner;
 
 public class StartProgram {
@@ -78,5 +84,6 @@ public class StartProgram {
         gerenteMatriz.mostrarDados();
         secretaria1.mostrarDados();
       
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
     }
 }

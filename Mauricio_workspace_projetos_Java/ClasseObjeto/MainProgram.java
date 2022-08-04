@@ -2,9 +2,15 @@ import java.io.IOException;
 
 public class MainProgram {
     //Aqui seream declarados os atributos da classe
+<<<<<<< HEAD
+    public static void limparTela() throws IOException, InterruptedException {
+        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+    }
+=======
    /* public static void limparTela() throws IOException, InterruptedException {
         new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
     }*/
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
     
     public MainProgram(){}
 
@@ -34,8 +40,14 @@ public class MainProgram {
         
         aluno.setId("001");
         aluno.setMatricula("925864");
+<<<<<<< HEAD
+        aluno.setNome("Mauricio Ramos");
+        
+
+=======
         aluno.setNome("Mauricio");
         
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
         aluno2.setId("002");
         aluno2.setMatricula("925865");
         aluno2.setNome("Valentina");
@@ -44,6 +56,8 @@ public class MainProgram {
         customMessage2.printCustomMessage(aluno2.mostrarDados());
         customMessage.printCustomMessage(aluno3.mostrarDados());
         //aluno.mostrarDados();
+<<<<<<< HEAD
+=======
 
         /* metodo do professor
          //Usa o objeto calculoBasico como parâmetro de "valueOf"
@@ -51,12 +65,17 @@ public class MainProgram {
         customMessage.printCustomMessage("Valor da soma: "
             + String.valueOf(calculoBasico.soma(1457, 2036)));
         */
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
         
         calculoBasico.soma(10 , 2);
         calculoBasico.subtração(10 , 2);
         calculoBasico.multiplicação(10 , 2);
         calculoBasico.divisão(10 , 2);
         
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
         calculoBasico2.soma(25, 25);
         calculoBasico2.subtração(25, 25);
         calculoBasico2.multiplicação(25, 25);
@@ -71,6 +90,10 @@ public class MainProgram {
         disciplina1.setNome("Java");
         disciplina1.setCargaHorária(40);
         
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
         disciplina2.setCódigo(57);
         disciplina2.setNome("Programação");
         disciplina2.setCargaHorária(60);
@@ -85,6 +108,10 @@ public class MainProgram {
         funcionario1.setSalário("R$ 2350,25");
         funcionario1.setDataAdmissão("21/02/2002");
         
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
         funcionario2.setNome("Arthur da Silva");
         funcionario2.setEndereço("Rua Sabiá, 150 Efapi, Chapecó");
         funcionario2.setSalário("R$ 1350,25");
@@ -97,6 +124,16 @@ public class MainProgram {
         
         instituicaoDeEnsino.setRazãoSocial("Unochapecó");
         instituicaoDeEnsino.setCnpj("158.564.215/0001-25");
+<<<<<<< HEAD
+        instituicaoDeEnsino.setEndereço("Servidão Anjos da Guarda, 25 Bairro Efapi");
+        instituicaoDeEnsino.setCidade("Chapecó");
+        instituicaoDeEnsino.setTelefone("(49) 3325-2564");
+        
+
+        instituicaoDeEnsino2.setRazãoSocial("Unoesc");
+        instituicaoDeEnsino2.setCnpj("125.664.215/0001-12");
+        instituicaoDeEnsino2.setEndereço("Av Nereu Ramos, 25 Bairro Seminário");
+=======
         instituicaoDeEnsino.setEndereço("Sv. Anjos da Guarda, 25 Efapi");
         instituicaoDeEnsino.setCidade("Chapecó");
         instituicaoDeEnsino.setTelefone("(49) 3325-2564");
@@ -104,6 +141,7 @@ public class MainProgram {
         instituicaoDeEnsino2.setRazãoSocial("Unoesc");
         instituicaoDeEnsino2.setCnpj("125.664.215/0001-12");
         instituicaoDeEnsino2.setEndereço("Av Nereu Ramos, 25 Seminário");
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
         instituicaoDeEnsino2.setCidade("Chapecó");
         instituicaoDeEnsino2.setTelefone("(49) 3323-1064");
 
@@ -115,7 +153,12 @@ public class MainProgram {
         laboratorio.setNome("RD");
         laboratorio.setBloco(5);
         laboratorio.setQuantidadeDeComputadores(42);
+<<<<<<< HEAD
+       
+
+=======
         
+>>>>>>> 2ecf949f8246f2667c14f7a157a6f55a1e01187c
         laboratorio2.setNome("RA");
         laboratorio2.setBloco(5);
         laboratorio2.setQuantidadeDeComputadores(35);
