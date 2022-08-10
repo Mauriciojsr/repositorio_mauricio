@@ -1,8 +1,0 @@
-{
-    "git.ignoreLimitWarning": true,
-    "java.project.sourcePaths":[
-        "Mauricio_workspace_projetos_Java/ConceitosJava",
-        ".vscode",
-        "Mauricio_workspace_projetos_Java/ClasseObjeto"
-    ]
-}

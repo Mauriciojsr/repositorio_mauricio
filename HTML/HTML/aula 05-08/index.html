@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site - Página Inicial</title>
+
+    <!--Booststrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!--Icones e Fontes-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body style="background-color: lightgray;">
+    <!--B. J Query-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!--B. Pooper-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <!--B. JS-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <div class="container">
+        <h3>Formulário Bootstrap</h3>
+        <br>
+    </div>
+    <div class="container">
+        <!--Primeira Linha-->
+        <div class="row">
+            <div class="form-group col-sm-6">
+                <label for="pnome">Primeiro Nome:</label>
+                <input type="text" id="pnome">
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="snome">Sobrenome:</label>
+                <input type="text" id="snome">
+            </div>
+        </div>
+        <br>
+        <!--Segunda Linha-->
+        <div class="row">
+            <div class="form-group col-sm-8">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade">
+            </div>
+            <div class="form-group col-sm-4">
+                <label for="estado">Estado</label>
+                <input type="text" id="estado">
+            </div>
+        </div>
+        <br>
+        <!--Duas colunas de mesma Largura-->
+        <div class="row">
+            <div class="col">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade">
+            </div>
+            <div class="col">
+                <label for="estado">Estado</label>
+                <input type="text" id="estado">
+            </div>
+        </div>
+        <br>
+        <!--Quatro Colunas de mesmo tamanho-->
+        <div class="row">
+            <div class="col">
+                <label for="pnome">Primeiro Nome:</label>
+                <input type="text" id="pnome">
+            </div>
+            <div class="col">
+                <label for="snome">Sobrenome:</label>
+                <input type="text" id="snome">
+            </div>
+            <div class="col">
+                <label for="cidade">Cidade:</label><br>
+                <input type="text" id="cidade">
+            </div>
+            <div class="col">
+                <label for="estado">Estado</label><br>
+                <input type="text" id="estado">
+            </div>
+        </div>
+        <br>
+        <!--Formulários Horizontal-->
+        <div class="form-group row">
+            <label class="col-sm-2" for="nome">Nome:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="nome">
+            </div>
+        </div>
+        <!--Nova Linha-->
+        <div class="form-group row">
+            <label class="col-sm-2" for="email">Email:</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="email">
+            </div>
+        </div>
+        <br>
+        <!--Check Box e Radiobutton-->
+        <div class="form-group">
+            <label for="">Email:</label>
+            <input type="text" class="form-control" aria-describedby="emailhelp" placeholder="Digite o Email">
+            <small class="form-text text-muted"><b>Não compartilhe suas senhas de acesso!</b></small>
+        </div>
+        <div class="form-group">
+            <label for="">Senha:</label>
+            <input type="password" class="form-control" placeholder="Senha">
+            <br>
+            <input type="radio">
+            <label class="form-check-inline"><b>Manter Logado</b></label>
+            <input type="radio">
+            <label class="form-check-inline"><b>Seção Única</b></label>
+
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input">
+            <label class="form-check-label"><b>Aceito os termos!</b></label>
+        </div>
+        <br>
+        <button class="btn btn-primary">Enviar</button>
+        <br>
+        <br>
+        <!--Exemplo de janela Modal-->
+        <button type="buttom" class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal">Abrir
+            Modal</button>
+        <br>
+        <!--Definindo Conteudo Janela Modal-->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!--Cabeçalho da Janela Modal-->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Modal Header</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!--Campo da Janela Modal-->
+                    <div class="modal-body">
+                        <label for="">Nome:</label>
+                        <input type="text" class="form-control">
+                        <label for="">Endereço:</label>
+                        <input type="text" class="form-control">
+                        <label for="">Telefone:</label>
+                        <input type="text" class="form-control">
+                        <br>
+                        <div align="right">
+                            <button type="button" class="btn btn-success">Enviar</button>
+                        </div>
+                    </div>
+                    <!--Rodapé da Janela Modal-->
+                    <div class="modal-footer">
+                        <button type="buttom" class="btn btn-danger" data-toggle="modal"
+                            data-target="#myModal">Limpar</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <ul class="navbar-nav">
+                <li class="nav-item active"><a class="nav-link" href="#">Active</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+                <li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</body>
+
+</html>
